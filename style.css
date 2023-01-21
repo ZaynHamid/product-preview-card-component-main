@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: hsl(30, 38%, 92%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container>div {
+    flex-basis: 1;
+    width: 30%;
+}
+
+.container>div:nth-child(2) {
+    padding: 3rem;
+    border-top-right-radius: 0.525rem;
+    border-bottom-right-radius: 0.525rem;
+}
+
+.heading {
+    font-weight: extrabold;
+    font-family: 'Fraunces';
+    font-size: 45px;
+}
+
+.x {
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: 'Montserrat';
+}
+
+.desc {
+    font-size: 1.525rem;
+    color: hsl(228, 12%, 48%);
+    font-weight: 300;
+    font-family: 'Montserrat';
+}
+
+.price {
+    display: flex;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.price>p:nth-child(1) {
+    font-size: 40px;
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces';
+}
+
+.price>p:nth-child(2) {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 1.225rem;
+    font-family: 'Montserrat';
+}
+
+.add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(158, 36%, 37%);
+    margin-top: 1.3rem;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bold;
+    gap: 0.2rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    width: 350px;
+    border-top-left-radius: 0.525rem;
+    border-bottom-left-radius: 0.525rem;
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        display: block;
+        margin: 1rem;
+    }
+
+    body {
+        height: auto;
+    }
+
+    .container>div,
+    .container>div:nth-child(2) {
+        width: 100%;
+    }
+
+    .container>div:nth-child(2) {
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 35px;
+    }
+
+    .image {
+        width: 100%;
+    }
+}
